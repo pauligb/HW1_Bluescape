@@ -7,5 +7,7 @@
         <file>assets/button_up.png</file>
         <file>Background.qml</file>
         <file>Logo.qml</file>
+        <file>Button.qml</file>
+        <file>TextButton.qml</file>
     </qresource>
 </RCC>

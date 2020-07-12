@@ -12,8 +12,8 @@ Implement a simple QML-based UI with a label and a button, similar to the one in
 - [ ] Main label should display a random word each time the button is clicked.
 - [ ] Words should be transfered using Qt’s C++ - QML bridging support.
 - [x] Window background should tile.
-- [ ] Button horizontal aligned with the window.
-- [ ] Button aligned at the bottom (TBD).
+- [x] Button horizontal aligned with the window.
+- [x] Button aligned at the bottom - With a specific bottom margin.
 - [x] Logo aligned top-right corner from window.
 
 

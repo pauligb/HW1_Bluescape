@@ -23,4 +23,24 @@ Window {
         }
         source: "assets/bluescape-logo.svg"
     }
+
+    TextButton {
+        width: 460
+        height: 55
+
+        anchors.bottom: parent.bottom
+        anchors.bottomMargin: 135
+        anchors.horizontalCenter: parent.horizontalCenter
+
+        leftBorder: 10
+        rightBorder: 10
+        topBorder: 10
+        bottomBorder: 10
+
+        sourceImg: "assets/button_up.png"
+        onPressImg: "assets/button_down.png"
+
+        text: qsTr("Click Me!")
+        color: "white"
+    }
 }
