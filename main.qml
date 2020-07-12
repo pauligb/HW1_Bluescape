@@ -3,7 +3,11 @@ import QtQuick.Window 2.13
 
 Window {
     visible: true
-    width: 640
-    height: 480
+    width: 851
+    height: 636
     title: qsTr("Hello World")
+
+    Background {
+        source: "assets/bg.png"
+    }
 }
