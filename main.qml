@@ -24,6 +24,17 @@ Window {
         source: "assets/bluescape-logo.svg"
     }
 
+    Text {
+        anchors.centerIn: parent
+        anchors.verticalCenterOffset: -40
+
+        font.pointSize: 44
+        font.family: "Verdana"
+
+        color: "#00c631" // Green Color
+        text: qsTr("BLUESCAPE ROCKS")
+    }
+
     TextButton {
         width: 460
         height: 55
