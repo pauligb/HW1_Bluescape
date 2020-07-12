@@ -22,7 +22,7 @@ Implement a simple QML-based UI with a label and a button, similar to the one in
 
 - [ ] Add function in Javascript to change the color of the label to a new random color when the button is clicked.
 - [ ] Make the color of the text fade smoothly to the new color.
-- [ ] Button scales horizontally with the window.
+- [x] Button scales horizontally with the window.
 - [x] Button corners should not appear stretched.
 
 ### Evaluation

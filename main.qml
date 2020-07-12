@@ -5,9 +5,26 @@ import RandomWordGenerator 1.0
 Window {
     id: window
     visible: true
-    width: 851
-    height: 636
+    width: _internal.defaultWidth
+    height: _internal.defaultHeight
     title: qsTr("Hello World")
+
+    QtObject {
+        id: _internal
+        property int defaultWidth: 851
+        property int defaultHeight: 636
+
+        property double xRatio: window.width / _internal.defaultWidth
+        property double yRatio: window.height / _internal.defaultHeight
+
+        function scaleX(value) {
+            return value * _internal.xRatio;
+        }
+
+        function scaleY(value) {
+            return value * _internal.yRatio;
+        }
+    }
 
     RandomWordGenerator {
         id: rwg_words
@@ -33,7 +50,7 @@ Window {
     Text {
         id: txt_mainText
         anchors.centerIn: parent
-        anchors.verticalCenterOffset: -40
+        anchors.verticalCenterOffset: _internal.scaleY(-40)
 
         font.pointSize: 44
         font.family: "Verdana"
@@ -43,11 +60,12 @@ Window {
     }
 
     TextButton {
-        width: 460
+        width: _internal.scaleX(460)
+        // We do not want to scale the TextButton height.
         height: 55
 
         anchors.bottom: parent.bottom
-        anchors.bottomMargin: 135
+        anchors.bottomMargin: _internal.scaleY(135)
         anchors.horizontalCenter: parent.horizontalCenter
 
         leftBorder: 10
