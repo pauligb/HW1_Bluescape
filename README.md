@@ -14,7 +14,7 @@ Implement a simple QML-based UI with a label and a button, similar to the one in
 - [x] Window background should tile.
 - [ ] Button horizontal aligned with the window.
 - [ ] Button aligned at the bottom (TBD).
-- [ ] Logo aligned top-right corner from window.
+- [x] Logo aligned top-right corner from window.
 
 
 ### Bonus points
