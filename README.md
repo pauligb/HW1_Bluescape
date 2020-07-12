@@ -4,7 +4,7 @@
 
 Implement a simple QML-based UI with a label and a button, similar to the one in the attached screenshot.
 
-// Screenshot - TBD
+![Expected Result](https://github.com/pauligb/HW1_Bluescape/blob/master/expected.png)
 
 ### Requirements
 
