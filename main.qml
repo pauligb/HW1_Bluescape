@@ -28,7 +28,7 @@ Window {
 
     RandomWordGenerator {
         id: rwg_words
-        filePath: "samplewords/sampleWords-1.txt"
+        filePath: "samplewords/sampleWords-2.txt"
     }
 
     Background {
@@ -49,6 +49,13 @@ Window {
 
     Text {
         id: txt_mainText
+
+        function changeColorAndText(newColor, newWord) {
+            _animation.newColor = newColor;
+            _animation.newText = newWord;
+            _animation.running = true;
+        }
+
         anchors.centerIn: parent
         anchors.verticalCenterOffset: _internal.scaleY(-40)
 
@@ -57,6 +64,20 @@ Window {
 
         color: "#00c631" // Green Color
         text: qsTr("BLUESCAPE ROCKS")
+
+        SequentialAnimation {
+            id: _animation
+
+            property color newColor
+            property string newText
+
+            running: false
+
+            OpacityAnimator { target: txt_mainText; from: 1; to: 0.0; duration: 250 }
+            PropertyAction { target: txt_mainText; property: "color"; value: _animation.newColor }
+            PropertyAction { target: txt_mainText; property: "text"; value: _animation.newText }
+            OpacityAnimator { target: txt_mainText; from: 0.0; to: 1; duration: 250 }
+        }
     }
 
     TextButton {
@@ -80,8 +101,9 @@ Window {
         color: "white"
 
         onClicked: {
-            var nextWord = rwg_words.generateWord()
-            txt_mainText.text = nextWord
+            var nextWord = rwg_words.generateWord();
+            var newColor = Qt.rgba(Math.random(), Math.random(), Math.random(), 1);
+            txt_mainText.changeColorAndText(newColor, nextWord);
         }
     }
 }
