@@ -8,9 +8,9 @@ Implement a simple QML-based UI with a label and a button, similar to the one in
 
 ### Requirements
 
-- [ ] Load a list of words from file on disk.
-- [ ] Main label should display a random word each time the button is clicked.
-- [ ] Words should be transfered using Qt’s C++ - QML bridging support.
+- [x] Load a list of words from file on disk.
+- [x] Main label should display a random word each time the button is clicked.
+- [x] Words should be transfered using Qt’s C++ - QML bridging support.
 - [x] Add main text horizontal centered.
 - [x] Window background should tile.
 - [x] Button horizontal aligned with the window.
@@ -23,7 +23,7 @@ Implement a simple QML-based UI with a label and a button, similar to the one in
 - [ ] Add function in Javascript to change the color of the label to a new random color when the button is clicked.
 - [ ] Make the color of the text fade smoothly to the new color.
 - [ ] Button scales horizontally with the window.
-- [ ] Button corners should not appear stretched.
+- [x] Button corners should not appear stretched.
 
 ### Evaluation
 

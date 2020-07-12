@@ -1,5 +1,6 @@
 import QtQuick 2.13
 import QtQuick.Window 2.13
+import RandomWordGenerator 1.0
 
 Window {
     id: window
@@ -7,6 +8,11 @@ Window {
     width: 851
     height: 636
     title: qsTr("Hello World")
+
+    RandomWordGenerator {
+        id: rwg_words
+        filePath: "samplewords/sampleWords-1.txt"
+    }
 
     Background {
         source: "assets/bg.png"
@@ -25,6 +31,7 @@ Window {
     }
 
     Text {
+        id: txt_mainText
         anchors.centerIn: parent
         anchors.verticalCenterOffset: -40
 
@@ -53,5 +60,10 @@ Window {
 
         text: qsTr("Click Me!")
         color: "white"
+
+        onClicked: {
+            var nextWord = rwg_words.generateWord()
+            txt_mainText.text = nextWord
+        }
     }
 }
