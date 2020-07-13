@@ -2,11 +2,13 @@
 #define RANDOMWORDGENERATOR_H
 
 #include <QObject>
+#include <QVector>
+#include <QString>
 
 class RandomWordGenerator : public QObject
 {
     Q_OBJECT
-    Q_PROPERTY(QString filePath READ getFilePath WRITE setFilePath NOTIFY filePathChanged REQUIRED)
+    Q_PROPERTY(QString filePath READ getFilePath WRITE setFilePath NOTIFY filePathChanged)
 
 public:
     explicit RandomWordGenerator(QObject *parent = nullptr);

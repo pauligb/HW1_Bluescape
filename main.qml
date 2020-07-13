@@ -7,7 +7,7 @@ Window {
     visible: true
     width: _internal.defaultWidth
     height: _internal.defaultHeight
-    title: qsTr("Hello World")
+    title: qsTr("HW1 Bluescape")
 
     QtObject {
         id: _internal

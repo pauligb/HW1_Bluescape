@@ -3,7 +3,6 @@
 #include <QFile>
 #include <QTextStream>
 #include <QRandomGenerator>
-
 #include <QDebug>
 #include <QTextCodec>
 
@@ -46,7 +45,7 @@ QString RandomWordGenerator::generateWord() {
     quint32 random_index =  QRandomGenerator::global()->bounded(m_words.size());
 
     if(m_words.size() == 1) {
-        return m_words.at(random_index);
+        return m_words.at(0);
     }
 
     while(m_current_index == random_index) {
