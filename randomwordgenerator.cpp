@@ -42,11 +42,11 @@ void RandomWordGenerator::loadFile() {
 }
 
 QString RandomWordGenerator::generateWord() {
-    quint32 random_index =  QRandomGenerator::global()->bounded(m_words.size());
-
-    if(m_words.size() == 1) {
-        return m_words.at(0);
+    if(m_words.size() == 0) {
+        return "";
     }
+
+    quint32 random_index =  QRandomGenerator::global()->bounded(m_words.size());
 
     while(m_current_index == random_index) {
         random_index =  QRandomGenerator::global()->bounded(m_words.size());

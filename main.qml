@@ -102,6 +102,9 @@ Window {
 
         onClicked: {
             var nextWord = rwg_words.generateWord();
+            if(nextWord === "") {
+                nextWord = txt_mainText.text;
+            }
             var newColor = Qt.rgba(Math.random(), Math.random(), Math.random(), 1);
             txt_mainText.changeColorAndText(newColor, nextWord);
         }

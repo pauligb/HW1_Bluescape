@@ -50,5 +50,12 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 HEADERS += \
     randomwordgenerator.h
 
+DESTDIR=$${OUT_PWD}/
+
+macx|macx: {
+    APPDIR=$${TARGET}.app/Contents/MacOS
+    DDIR=$${OUT_PWD}/$${APPDIR}/
+}
+
 # Copy samplewords path to build directory, used for testing.
-copyToDestDir($$PWD/samplewords, $$OUT_PWD/samplewords)
+copyToDestDir($${PWD}/samplewords, $${DDIR})
