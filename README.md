@@ -25,6 +25,15 @@ Implement a simple QML-based UI with a label and a button, similar to the one in
 - [x] Button scales horizontally with the window.
 - [x] Button corners should not appear stretched.
 
+## Considerations
+
+- Logo does not resize, it does not look good when resizing. Even when
+  keeping aspect ratio.
+- Sample test files must be located in binary directory. qmake contains
+  basic logic to copy the sample files to build directory.
+- Did not plan how resizing should look when widht or height are really small.
+  Decided to keep button height the same always and not allowing multiline for button or main text.
+
 ### Evaluation
 
 We will be testing it on an unspecified OS using Qt 5.13.
