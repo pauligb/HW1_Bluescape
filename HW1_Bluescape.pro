@@ -50,7 +50,7 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 HEADERS += \
     randomwordgenerator.h
 
-DESTDIR=$${OUT_PWD}/
+DDIR=$${OUT_PWD}/samplewords
 
 macx|macx: {
     APPDIR=$${TARGET}.app/Contents/MacOS
